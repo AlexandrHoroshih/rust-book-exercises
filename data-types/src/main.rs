@@ -1,4 +1,5 @@
 fn main() {
+    println!("SCALARS");
     println!("Ints");
     const MAX_I8: i8 = 127;
     const MAX_U8: u8 = 255;
@@ -22,4 +23,29 @@ fn main() {
     let z = 'ℤ';
     const HEART_EYED_CAT: char = '😻';
     println!("{}, {}, {}", c, z, HEART_EYED_CAT);
+    println!("COMPOUNDS!");
+    println!("Tuple");
+    let tup: (f64, i16, bool) = (5.4, 34, false);
+    let (x, y, z) = tup;
+    println!(
+        "tuple (f64, i16, bool) ({}, {}, {}), last item is tuple.2 = {}",
+        x, y, z, tup.2
+    );
+    println!("Arrays");
+    // arrays have fixed length and same type for all items
+    let months: [&str; 12] = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
+    ];
+    println!("Nine month is {}", months[8]);
 }
